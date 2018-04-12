@@ -4,21 +4,21 @@ const kioskModule = (()=>{
   const secondContainer = document.getElementById('last-digits');
 
   const getValue=(event)=>{
-    let selectedNumber = (event.target.tagName === 'P') && event.target.textContent;
+    let selectedNumber = (event.target.tagName === 'P' && event.target.className !== 'check' && event.target.className !== 'delete') && event.target.textContent;
     if(selectedNumber){
-      if(selectedNumber === 'x'){
-        personalNumber.pop();
-        setValue(personalNumber);
-        console.log('delete');
-      } else if(selectedNumber === 'ok'){
-        console.log('clicked ok')
-      } else if(personalNumber.length < 10){
+      if(personalNumber.length < 10){
         personalNumber.push(selectedNumber);
         console.log(personalNumber);
         setValue(personalNumber);
       } else {
         console.log('reached max');
       }
+    } else if(event.target.className ==='check'){
+      console.log('clicked ok')
+    } else if(event.target.className === 'delete'){
+      personalNumber.pop();
+      setValue(personalNumber);
+      console.log('delete');
     }
   }
 

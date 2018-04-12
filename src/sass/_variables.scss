@@ -1,6 +1,16 @@
 $btn-numbers:#7A3909;
 $color-light-grey:#E7E7E7;
 
-@mixin respond-to(){
-  @content
-}
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+};
