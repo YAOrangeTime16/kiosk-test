@@ -74,12 +74,12 @@ main {
   }
 }
 
-.tablet-wrapper {
+#tablet-wrapper {
   display: grid;
   grid-template-columns: 5rem 5rem 5rem;
   grid-template-rows: 5rem 5rem 5rem 5rem;
 
-  > div {
+  > p, div {
     background: $btn-numbers;
     width: 90%;
     height: 90%;
@@ -87,5 +87,12 @@ main {
     line-height: 5rem;
     text-align: center;
     font-size: 2.8em;
+  }
+  .check {
+    background-image: url('../images/check.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90%;
+    width: 90%;
   }
 }
