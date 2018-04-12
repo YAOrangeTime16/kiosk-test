@@ -4,12 +4,12 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('scss', ()=>{
-  return gulp.src('sass/*.scss')
+  gulp.src('src/sass/*.scss')
   .pipe(sourcemaps.init())
     .pipe(autoprefixer())
     .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('css'));
+  .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('default', ['scss']);
