@@ -14,32 +14,95 @@
 </head>
 <body>
   <main>
+
       <section id="main-content">
+
         <div class="grid-wrapper">
-            <div id="item-btn"><h3>tillbehör</h3></div>
-            <div id="item-header"><h1>Kassa</h1></div>
-            <div id="item-info">
+
+            <section id="item-btn">
+              <div class="icon-arrow"></div>
+              <h3>tillbehör</h3>
+            </section>
+
+            <section id="item-header">
+              <h1>Kassa</h1>
+            </section>
+            
+            <section id="item-info">
               <h2>Kunduppgifter</h2>
-              <p>Häta dina adressuppgifter genom att fylla i ditt personnummber.</p>
-              <div class="personal-number">
-                <div id="first-digits"></div> <div id="last-digits"></div>
-              </div>
-              <div class="address">(Adress)</div>
-            </div>
-            <div id="item-contact">
+              <p>Häta dina adressuppgifter genom att fylla i ditt personnummber.</p>     
+              <section class="form-personalnumber">
+                  <p>PERSONNUMMER</p>
+                  <div class="personalnumber"> 
+                    <div id="first-digits"></div><div>-</div><div id="last-digits"></div>
+                  </div>
+                  <div class="first-digits-svg"></div>
+                  <div class="second-digits-svg"></div>    
+              </section>
+              <section class="address">
+                  <h4>Bo Göran</h4>
+                  <p>Rävgatan 1b</p>
+                  <p>123 45 Boliden</p>
+                </section>
+            </section>
+
+            <section id="item-contact">
               <h2>kontaktuppgifter</h2>
               <p>Fyll i ditt mobilnummber för att få ett SMS när din order är redo.</p>
-              <div>
+              <div class="form-mobile">
                 <p>MOBILNUMMER</p>
-                <div>(number)</div>
-                <div class="tel-icon"></div>
+                <div class="telephone">0701245678</div>
+                <div class="icon-pen"></div>
               </div>
-            </div>
-            <div id="item-order">din beställning</div>
+              <div class="tel-digits-svg"></div>
+            </section>
+
+            <section id="item-order">
+              <div>
+                <ul class="order-items">
+                  <li>
+                    <figure class="item1"></figure>
+                    <div>
+                      <h5>Bosch</h5>
+                      <p>PST 700E</p>
+                    </div>
+                    <span>1 st</span>
+                    <span>599</span>
+                    <span>kr</span>
+                  </li>
+                  <li>
+                    <figure class="item2"></figure>
+                    <div>
+                      <h5>Bosch</h5>
+                      <p>10-dels sticksågblad trä/metall</p>
+                    </div>
+                    <span>1 st</span>
+                    <span>139</span>
+                    <span>kr</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul class="delivery-types">
+                  <li>
+                    <div class="icon-truck"></div>
+                  </li>
+                  <li>
+                    <div class="icon-store"></div>
+                  </li>
+                </ul>
+              </div>
+
+              <div></div>
+            </section>
+
         </div>
+
       </section>
+
       <section id="number-tablet">
-        <h3>Kassan</h3>
+        <h4>Kassan</h4>
         <p>Använd knappsatsen nedan för att mata in ditt personnummer respektive mobilnummer i formläret till vänster. Välj sedan ditt önskade leveranssätt och klicka på "Beställ"</p>
         <div id="tablet-wrapper">
           <p>1</p>
@@ -56,12 +119,16 @@
           <p class="check"></p>
         </div>
       </section>
+
       <section id="footer-back">
-        <h2>Fortsätt handla</h2>
+        <div class="icon-back"></div><h2>Fortsätt handla</h2>
       </section>
+
       <section id="footer-forward">
-        <h1>BESTÄLL</h1>
+        <h2>BESTÄLL</h2>
+        <div class="icon-arrow-rotate"></div>
       </section>
+
   </main>
   <script src="src/js/index.js"></script>
 </body>
