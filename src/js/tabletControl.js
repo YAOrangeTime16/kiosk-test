@@ -1,4 +1,4 @@
-const kioskModule = (()=>{
+const tabletControl = (()=>{
   let personalNumber = [];
   const firstContainer = document.getElementById('first-digits');
   const secondContainer = document.getElementById('last-digits');
@@ -8,17 +8,15 @@ const kioskModule = (()=>{
     if(selectedNumber){
       if(personalNumber.length < 10){
         personalNumber.push(selectedNumber);
-        console.log(personalNumber);
         setValue(personalNumber);
       } else {
         console.log('reached max');
       }
-    } else if(event.target.className ==='check'){
+    } else if(event.target.id ==='check'){
       console.log('clicked ok')
-    } else if(event.target.className === 'delete'){
+    } else if(event.target.id === 'delete'){
       personalNumber.pop();
       setValue(personalNumber);
-      console.log('delete');
     }
   }
 
@@ -34,4 +32,4 @@ const kioskModule = (()=>{
 })();
 
 const tablet = document.getElementById('tablet-wrapper');
-tablet.addEventListener('click', kioskModule.getValue, false);
+tablet.addEventListener('click', tabletControl.getValue, false);

@@ -21,7 +21,7 @@
 
             <section id="item-btn">
               <div class="icon-arrow"></div>
-              <h3>tillbehör</h3>
+              <h2>Tillbehör</h2>
             </section>
 
             <section id="item-header">
@@ -47,7 +47,7 @@
             </section>
 
             <section id="item-contact">
-              <h2>kontaktuppgifter</h2>
+              <h2>Kontaktuppgifter</h2>
               <p>Fyll i ditt mobilnummber för att få ett SMS när din order är redo.</p>
               <div class="form-mobile">
                 <p>MOBILNUMMER</p>
@@ -58,7 +58,6 @@
             </section>
 
             <section id="item-order">
-              <div>
                 <ul class="order-items">
                   <li>
                     <figure class="item1"></figure>
@@ -66,8 +65,13 @@
                       <h5>Bosch</h5>
                       <p>PST 700E</p>
                     </div>
-                    <span>1 st</span>
-                    <span>599</span>
+                    <div class="item-quantity">
+                        <div class="icon-minus"></div>
+                        <span class="quantity">1</span>
+                        <span>st</span>
+                        <div class="icon-plus"></div>
+                    </div>
+                    <span class="item-price price text-right">599</span>
                     <span>kr</span>
                   </li>
                   <li>
@@ -76,25 +80,53 @@
                       <h5>Bosch</h5>
                       <p>10-dels sticksågblad trä/metall</p>
                     </div>
-                    <span>1 st</span>
-                    <span>139</span>
+                    <div class="item-quantity">
+                      <div class="icon-minus"></div>
+                      <span class="quantity">1</span>
+                      <span>st</span>
+                      <div class="icon-plus"></div>
+                    </div>
+                    <span class="item-price price text-right" value="139">139</span>
                     <span>kr</span>
                   </li>
                 </ul>
-              </div>
               
-              <div>
                 <ul class="delivery-types">
                   <li>
                     <div class="icon-truck"></div>
+                    <div class="radio-truck">
+                        <input id="deliver" type="radio" name="delivery-type" checked value="79"/>
+                        <label for="deliver">Hemleverans</label>
+                    </div>
+                    <span class="text-right">79</span>
+                    <span>kr</span>
                   </li>
                   <li>
                     <div class="icon-store"></div>
+                    <div class="radio-store">
+                        <input id="store" type="radio" name="delivery-type"/>
+                        <label for="store">Hämta i butik</label>
+                    </div>
+                    <span class="text-right">0</span>
+                    <span>kr</span>
+                  </li>
+                  <li class="total-price">
+                    <div>
+                        <p class="text-right text-cost">Att betala:</p>
+                        <p class="text-right text-moms">varav moms:</p>
+                    </div>
+                    <div>
+                        <p class="text-right text-cost" id="total"></p>
+                        <p class="text-right text-moms" id="moms"></p>
+                    </div>
+                    <div>
+                        <p class="text-cost">kr</p>
+                        <p class="text-moms">kr</p>
+                    </div>
+                    
                   </li>
                 </ul>
-              </div>
 
-              <div></div>
             </section>
 
         </div>
@@ -114,9 +146,9 @@
           <p>7</p>
           <p>8</p>
           <p>9</p>
-          <p class="delete"></p>
+          <p id="delete"></p>
           <p>0</p>
-          <p class="check"></p>
+          <p id="check"></p>
         </div>
       </section>
 
@@ -130,6 +162,7 @@
       </section>
 
   </main>
-  <script src="src/js/index.js"></script>
+  <script src="src/js/tabletControl.js"></script>
+  <script src="src/js/itemPrice.js"></script>
 </body>
 </html>

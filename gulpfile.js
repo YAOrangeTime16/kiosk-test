@@ -12,6 +12,17 @@ gulp.task('scss', ()=>{
   .pipe(gulp.dest('src/css'));
 });
 
+gulp.task('build-js', ()=>{
+  gulp.src('src/js/*.js')
+  .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(concat('concat.js'))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('dist/js'))
+})
+
 gulp.task('scss:watch', ()=>{
   gulp.watch('src/sass/*.scss', ['scss'])
 });
