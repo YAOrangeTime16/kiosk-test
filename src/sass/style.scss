@@ -218,22 +218,22 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 30%;
+    height: 25%;
 
     h4 {
       margin-left: 2.5rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.4rem;
     }
 
     p {
       margin-top: 0;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
       font-size: $text-sm;
     }
   }
 
   .form-personalnumber {
-    height: 4rem;
+    height: 3.5rem;
     width: 105%;
     padding: 1rem 0;
     margin-top: 1rem;
@@ -250,10 +250,9 @@ main {
   .personalnumber {
     display: flex;
     flex-direction: row;
-    height: 5rem;
     width: 80%;
     font-weight: 600;
-    font-size: 2.8em;
+    font-size: 2.4em;
     height: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -261,9 +260,10 @@ main {
   }
 
   #first-digits {
-    width: 40%;
-    letter-spacing: 0.4rem;
+    width: 38%;
+    letter-spacing: 0.42rem;
     margin-top: 0.5rem;
+    margin-left: 0.2rem;
 
     + div {
       margin: 0 0.4rem;
@@ -274,9 +274,9 @@ main {
   }
 
   #last-digits {
-    width: 30%;
+    width: 35%;
     margin-left: 0.4rem;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.42rem;
     margin-top: 0.5rem;
   }
 
@@ -296,7 +296,7 @@ main {
     background-repeat: no-repeat;
     width: 40%;
     height: 10%;
-    margin-left: 1.2rem;
+    margin-left: 0.8rem;
     margin-top: 0.5rem;
   }
 }
@@ -307,7 +307,7 @@ main {
     bottom: 0;
     background-color: #e6e6e6;
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     z-index: 0;
     padding-top: 1rem;
 
@@ -332,16 +332,16 @@ main {
 
   .telephone {
     font-weight: 600;
-    font-size: 2.8em;
-    letter-spacing: 0.43rem;
+    font-size: 2.4em;
+    letter-spacing: 0.42rem;
     margin-left: 2.7rem;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     color: #000000;
   }
 
   .tel-digits-svg {
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 0.2rem;
     left: 2.3rem;
     display: inline-block;
     background-image: url('../images/telDigits.svg');
@@ -419,7 +419,6 @@ main {
   background-position: center;
   background-size: cover;
 }
-
 .icon-truck,
 .icon-store {
   height: 2rem;
@@ -500,7 +499,7 @@ main {
 
 .delivery-types {
   position: absolute;
-  bottom: 5rem;
+  bottom: 2rem;
   width: 95%;
 }
 

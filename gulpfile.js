@@ -1,6 +1,10 @@
 const gulp =require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
+
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('scss', ()=>{
@@ -20,7 +24,7 @@ gulp.task('build-js', ()=>{
     }))
     .pipe(concat('concat.js'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('dist/js'))
+  .pipe(gulp.dest('src/js'))
 })
 
 gulp.task('scss:watch', ()=>{

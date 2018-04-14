@@ -14,6 +14,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4"
   },
+  "homepage": "https://yaorangetime16.github.io/kiosk-test/",
   "browserslist": [
     "> 1%",
     "last 2 versions"
