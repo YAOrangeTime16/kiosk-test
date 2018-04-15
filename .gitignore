@@ -1,9 +1,6 @@
 # dependencies
 /node_modules
 
-# dev-styles
-/sass
-
 /.vscode
 
 npm-debug.log*

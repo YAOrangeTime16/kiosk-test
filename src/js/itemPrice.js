@@ -9,8 +9,6 @@ const taxPrice = document.getElementById('moms');
 const deliver = document.getElementById('deliver');
 const store = document.getElementById('store');
 
-console.log(deliver.parentElement.nextElementSibling)
-
 const itemPriceCalc = (()=>{
   let newQuantity;
   let newItemPrice;
