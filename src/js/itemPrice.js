@@ -45,6 +45,7 @@ const itemPriceCalc = (()=>{
 
   const subtract = index => {
     let currentQuantity = parseInt(quantity[index].textContent);
+    console.log(currentQuantity);
     if(currentQuantity > 0){
       newQuantity = currentQuantity-1;
       quantity[index].innerHTML = newQuantity;
@@ -56,6 +57,7 @@ const itemPriceCalc = (()=>{
 
   const add = index =>{
     let currentQuantity = parseInt(quantity[index].textContent);
+    console.log(currentQuantity);
     newQuantity = currentQuantity+1;
     quantity[index].innerHTML = newQuantity;
     changeItemPrice(index, newQuantity, 1);
