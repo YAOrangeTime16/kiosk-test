@@ -1,0 +1,122 @@
+@import '_variables';
+main {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    'footer-l'
+    'main'
+    'main'
+    'main'
+    'main'
+    'side'
+    'side'
+    'side'
+    'footer-r';
+
+  @include respond-to('medium'){
+    grid-template-areas:
+    'main main side'
+    'main main side'
+    'main main side'
+    'footer-l footer-l footer-r';
+  }
+}
+
+#main-content {
+  grid-area: main;
+  background: $color-primary;
+  height: auto;
+  width: 100%;
+}
+
+#number-tablet {
+  grid-area: side;
+  background: #C55500;
+  color: #ffffff;
+}
+
+#footer-back {
+  grid-area: footer-l;
+  background: $color-primary;
+  height: 3rem;
+  color: #ffffff;
+  @include respond-to('medium'){
+    background: #C55500;
+  }
+}
+
+#footer-forward {
+  grid-area: footer-r;
+  background: #703000;
+  color: #ffffff;
+}
+
+.grid-wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-areas:
+    'order'
+    'order'
+    'order'
+    'order'
+    'order'
+    'order'
+    'header-btn'
+    'personal-info'
+    'personal-info'
+    'personal-info'
+    'contact'
+    'contact';
+    grid-gap: 1rem;
+
+  #item-btn {
+    color: $color-primary;
+    grid-area: header-btn;
+    background: #ffffff;
+
+    @include respond-to('medium'){
+      background: $color-primary;
+      color: #ffffff;
+    }
+  }
+
+  #item-header {
+    display: none;
+    @include respond-to('medium'){
+      display: block;
+      color: #ffffff;
+      grid-area: header-txt;
+    }
+  }
+
+  #item-info {
+    background: #ffffff;
+    grid-area: personal-info;
+    height: 21rem;
+  }
+
+  #item-contact {
+    background: #ffffff;
+    grid-area: contact;
+    height: 14rem;
+  }
+
+  #item-order {  
+    background: #ffffff;
+    grid-area: order;
+    height: 35rem;
+  }
+
+  @include respond-to('medium'){
+    grid-template-areas:
+      'header-btn header-txt'
+      'personal-info order'
+      'personal-info order'
+      'personal-info order'
+      'personal-info order'
+      'contact order'
+      'contact order';
+  }
+}
+
