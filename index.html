@@ -14,6 +14,7 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="src/css/style.css">
   <link rel="stylesheet" type="text/css" href="src/css/grid.css">
+  <link rel="stylesheet" type="text/css" href="src/css/tablet.css">
   <title>KIOSKEN-QUIZ</title>
 </head>
 <body>
@@ -35,13 +36,13 @@
             <section id="item-info">
               <h2>Kunduppgifter</h2>
               <p>Häta dina adressuppgifter genom att fylla i ditt personnummber.</p>     
-              <section class="form-personalnumber">
+              <section class="form-personalnumber disable">
                   <p>PERSONNUMMER</p>
                   <div class="personalnumber"> 
                     <div id="first-digits"></div><div>-</div><div id="last-digits"></div>
                   </div>
-                  <div class="first-digits-svg"></div>
-                  <div class="second-digits-svg"></div>    
+                  <div class="pnumber-digits-svg"></div>
+                  <div class="icon-pen" value="personalNumber"></div>   
               </section>
               <section class="address">
                   <h4>Bo Göran</h4>
@@ -53,12 +54,12 @@
             <section id="item-contact">
               <h2>Kontaktuppgifter</h2>
               <p>Fyll i ditt mobilnummber för att få ett SMS när din order är redo.</p>
-              <div class="form-mobile">
+              <div class="form-mobile disable">
                 <p>MOBILNUMMER</p>
-                <div class="telephone">0701245678</div>
-                <div class="icon-pen"></div>
+                <div id="telephone" class="telephone"></div>
+                <div class="icon-pen" value="telNumber"></div>
+                <div class="tel-digits-svg"></div>
               </div>
-              <div class="tel-digits-svg"></div>
             </section>
 
             <section id="item-order">
@@ -157,7 +158,8 @@
       </section>
 
       <section id="footer-back">
-        <div class="icon-back"></div><h2>Fortsätt handla</h2>
+        <div class="icon-back"></div>
+        <h2>Fortsätt handla</h2>
       </section>
 
       <section id="footer-forward">
@@ -169,7 +171,7 @@
   <script src="src/js/itemPrice.js"></script>
   <script src="src/js/tabletControl.js"></script>
   <script language="javascript">
-    //if(screen.width<=1100) {document.write("<style>body{zoom:75%;}</style>");}
+    if(screen.width<1400 && screen.width>1000) {document.write("<style>body{zoom:65%;}</style>");}
   </script>
 </body>
 </html>
