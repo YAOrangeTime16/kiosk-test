@@ -8,6 +8,7 @@ html {
 body {
   font-family: Helvetica, 'Open Sans', sans-serif, Arial;
   height: auto;
+  width: 100%;
   margin: 0;
   font-size: 62.5%;
   font-weight: 200;
@@ -27,23 +28,23 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2em;
+  font-size: 2.6em;
   @include respond-to('l'){
     font-size: 2em;
   }
 }
 
 h2 + p {
-  font-size: 1.4em;
+  font-size: 1.6em;
   color: #535353;
 }
 
 h3 {
-  font-size: 2.2em;
+  font-size: 2.4em;
 }
 
 h4 {
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 h5 {
@@ -68,7 +69,7 @@ h5 {
     margin-left: $margin-side-mob;
     cursor: pointer;
     @include respond-to('m'){
-      margin-left: $margin-side-tab;
+      margin-left: $side-space;
     }
   }
 
@@ -98,7 +99,7 @@ h5 {
   position: relative;
 
   @include respond-to('m'){
-    margin-left: $margin-side-tab;
+    margin-left: $side-space;
     margin-right: 0.5rem;
   }
   
@@ -106,9 +107,12 @@ h5 {
     margin: 1rem $margin-side-mob 0 $margin-side-mob;
     line-height: 1.6em;
     @include respond-to('s'){
-      margin-left: $margin-side-tab;
+      margin-left: $margin-side-mob;
     }
     @include respond-to('m'){
+      margin: 0.5rem $margin-side-tab 0 $margin-side-tab;
+    }
+    @include respond-to('l'){
       margin: 0.5rem $margin-side-screen 0 $margin-side-screen;
     }
   }
@@ -116,11 +120,11 @@ h5 {
   h2 {
     color: #000000;
     margin: 1rem $margin-side-mob;
-    @include respond-to('s'){
+    @include respond-to('m'){
       margin-left: $margin-side-tab;
     }
     @include respond-to('l'){
-      margin: 0.5rem $margin-side-screen;
+      margin: $margin-side-tab $margin-side-screen;
     }
   }
 }
@@ -136,7 +140,7 @@ h5 {
     h4 {
       margin-left: $margin-side-mob;
       margin-bottom: 0.4rem;
-      @include respond-to('s'){
+      @include respond-to('m'){
         margin-left: $margin-side-tab;
       }
       @include respond-to('l'){
@@ -169,7 +173,6 @@ h5 {
     }
 
     @include respond-to('m'){
-      margin-top: 0rem;
       margin-left: 0rem;
     }
 
@@ -217,37 +220,51 @@ h5 {
 
   #first-digits {
     width: 42%;
-    letter-spacing: 0.58rem;
-    margin-top: 0.8rem;
-    margin-left: 0.4rem;
+    letter-spacing: 0.52rem;
+    margin-top: 0.7rem;
+    margin-left: -0.5rem;
 
     @include respond-to('s'){
       width: 32%;
     }
-    @include respond-to('l'){
-      letter-spacing: 0.7rem;
-      margin-left: -1rem;
+    @include respond-to('m'){
+      letter-spacing: 0.29rem;
+      margin-left: -0.2rem;
+      margin-top: 0.8rem;
     }
-
-    + div {
-      margin: 0.8rem 0rem 0.8rem 0.4rem;
-      width: 5%;
-      text-align: center;
-      @include respond-to('l'){
-        margin-left: 1.2rem;
-      }
+    @include respond-to('l'){
+      margin-left: -0.6rem;
+      letter-spacing: 0.36rem;
+    }
+    @include respond-to('xl'){
+      font-size: 1.4rem;
+      margin-left: -1.2rem;
+      letter-spacing: 0.38rem;
     }
   }
 
   #last-digits {
     width: 32%;
     letter-spacing: 0.5rem;
-    margin-top: 0.8rem;
-    margin-left: 0.7rem;
+    margin-top: 0.7rem;
+    position: absolute;
+    left: 11.9rem;
+
+    @include respond-to('m'){
+      letter-spacing: 0.29rem;
+      left: 8.3rem;
+      margin-top: 0.8rem;
+    }
 
     @include respond-to('l'){
-      letter-spacing: 0.7rem;
-      margin-left: 1rem;
+      letter-spacing: 0.36rem;
+      left: 8.4rem;
+    }
+
+    @include respond-to('xl'){
+      letter-spacing: 0.38rem;
+      font-size: 1.4rem;
+      left: 10.4rem;
     }
   }
 
@@ -257,15 +274,19 @@ h5 {
     background-repeat: no-repeat;
     width: 80%;
     height: 10%;
-    margin-left: 2.4rem;
+    margin-left: $margin-side-mob;
 
     @include respond-to('m'){
-      margin-left: $margin-side-screen;
+      margin-left: $margin-side-tab;
+      zoom: 80%;
+    }
+    @include respond-to('xl'){
+      margin-left: $margin-side-tab;
+      height: 12%;
+      zoom: 90%;
     }
   }
 }
-
-
 
 #item-contact {
   position: relative;
@@ -276,6 +297,7 @@ h5 {
     width: 100%;
     max-width: 28rem;
     padding: 1rem 0;
+    margin-bottom: $margin-side-mob;
     p {
       margin-top: 0;
     }
@@ -286,6 +308,7 @@ h5 {
 
     @include respond-to('m'){
       margin-left: 0rem;
+      margin-bottom: 0rem;
     }
 
     &.disable {
@@ -310,15 +333,26 @@ h5 {
   .telephone {
     font-weight: 600;
     font-size: 1.4rem;
-    letter-spacing: 0.62rem;
-    margin-left: 2.9rem;
+    letter-spacing: 0.51rem;
+    margin-left: 2rem;
     margin-top: 0.4rem;
     color: #000000;
-  
+
     @include respond-to('m'){
-      letter-spacing: 0.58rem;
-      margin-left: 2rem;
+      letter-spacing: 0.37rem;
+      margin-top: 0.8rem;
+      margin-left: 1.4rem;
+    }
+
+    @include respond-to('l'){
+      letter-spacing: 0.48rem;
       font-size: 1.2rem;
+      margin-top: 0.8rem;
+    }
+  
+    @include respond-to('xl'){
+      font-size: 1.4rem;
+      margin-left: 2rem;
     }
   }
 
@@ -333,13 +367,16 @@ h5 {
     z-index: 100;
     margin-left: $margin-side-mob;
     padding-bottom: 0.5rem;
-    zoom: 110%;
+    zoom: 105%;
 
     @include respond-to('m'){
-      margin-left: $margin-side-screen;
+      margin-left: $margin-side-tab;
+      zoom: 96%
     }
 
-    @include respond-to('l'){
+    @include respond-to('xl'){
+      margin-left: $margin-side-screen;
+      zoom: 100%;
       bottom: 0.3rem;
     }
   }
@@ -357,6 +394,19 @@ h5 {
   position: absolute;
   right: 2rem;
   bottom: 2rem;
+
+  @include respond-to('m'){
+    height: 1.2rem;
+    width: 1.2rem;
+    right: 1.5rem;
+    bottom: 3.6rem;
+  }
+  @include respond-to('xl'){
+    height: 1.5rem;
+    width: 1.5rem;
+    right: 2rem;
+    bottom: 1.4rem;
+  }
 }
 
 
@@ -378,13 +428,11 @@ h5 {
 #footer-forward {
   cursor: pointer;
   display: grid;
-  grid-template-columns: 50% 50%;
-  text-align: center;
+  grid-template-columns: auto 3.5rem;
 
   @include respond-to('m'){
     grid-template-columns: 70% 30%;
   }
-  
 
   h2 {
     padding-left: $margin-side-mob;
@@ -584,6 +632,18 @@ h5 {
 .delivery-types > li:not(:last-child){
   grid-template-columns: 15% 68% 7% 10%;
   border-bottom: 3px dotted $color-light-grey;
+
+  @include respond-to('s'){
+    grid-template-columns: 15% auto 12% 10%;
+  }
+  @include respond-to('m'){
+    grid-template-columns: 10% auto 12% 10%;
+    grid-template-rows: 3rem;
+  }
+
+  @include respond-to('l'){
+    grid-template-columns: 15% auto 10% 10%;
+  }
 }
 
 .delivery-types > li:last-child {
@@ -599,15 +659,23 @@ h5 {
 .icon-store,
 .icon-truck {
   grid-column: 1 / 2;
-  margin: 1rem 0.5rem 0.5rem 2rem;
+  margin: 0.5rem 0.5rem 0.5rem $margin-side-mob;
+
+  @include respond-to('xl'){
+    margin-left: $margin-side-screen;
+  }
 }
 
 .radio-truck,
 .radio-store {
   grid-column: 2 / 3;
   display: inline-block;
-  line-height: 3.5rem;
+  line-height: 3rem;
   margin-left: 1rem;
+
+  @include respond-to('s'){
+    margin-left: 0rem;
+  }
 
   input[type=radio] {
     display: none;
@@ -615,7 +683,6 @@ h5 {
 
   label {
     position: relative;
-    top: 0.5rem;
     font-size: 1.6em;
     cursor: pointer;
     display: block;
@@ -638,8 +705,8 @@ h5 {
     border: 3px solid $color-primary;
 
     @include respond-to('l'){
-      left: -2rem;
-      top: 1.2rem;
+      left: -2.5rem;
+      top: 0.7rem;
     }
   }
 
@@ -655,8 +722,8 @@ h5 {
     transform: rotate(-45deg);
 
     @include respond-to('l'){
-      left: -1.7rem;
-      top: 1.6rem;
+      left: -2.2rem;
+      top: 1.2rem;
     }
   }
 

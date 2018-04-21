@@ -4,15 +4,18 @@ $color-primary: #FB6800;
 $font-color-primary: #868686;
 $text-lg: 1.8em;
 $text-sm: 1.4em;
-$margin-side-mob: 2.5rem;
-$margin-side-tab: 3rem;
+$margin-side-mob: 1.5rem;
+$margin-side-tab: 1rem;
 $margin-side-screen: 1.5rem;
+$side-space: 3rem;
 
 $breakpoints: (
   'xs': 400px,
   's':  767px,
   'm': 992px,
-  'l':  1024px
+  'l':  1024px,
+  'xl': 1200px,
+  'xxl': 1440px
 );
 
 @mixin respond-to($breakpoint) {
