@@ -4,16 +4,23 @@ $color-primary: #FB6800;
 $font-color-primary: #868686;
 $text-lg: 1.8em;
 $text-sm: 1.4em;
+$margin-side-mob: 1.5rem;
+$margin-side-tab: 1rem;
+$margin-side-screen: 1.5rem;
+$side-space: 3rem;
 
 $breakpoints: (
-  'small':  767px,
-  'medium': 992px,
-  'large':  1024px
+  'xs': 400px,
+  's':  767px,
+  'm': 992px,
+  'l':  1024px,
+  'xl': 1200px,
+  'xxl': 1440px
 );
 
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
   }
