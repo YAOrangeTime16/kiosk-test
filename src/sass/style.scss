@@ -2,7 +2,7 @@
 
 html {
   height: 100%;
-  width: 100%;
+  width: 100vw;
 }
 
 body {
@@ -124,7 +124,10 @@ h5 {
       margin-left: $margin-side-tab;
     }
     @include respond-to('l'){
-      margin: $margin-side-tab $margin-side-screen;
+      margin: $margin-side-tab $margin-side-screen 0.5rem $margin-side-screen;
+    }
+    @include respond-to('xxl'){
+      margin: $margin-side-screen;
     }
   }
 }
@@ -174,6 +177,14 @@ h5 {
 
     @include respond-to('m'){
       margin-left: 0rem;
+    }
+
+    @include respond-to('l'){
+      margin-top: 0.5rem;
+    }
+
+    @include respond-to('xxl'){
+      margin-top: 2rem;
     }
 
     p {
@@ -233,13 +244,18 @@ h5 {
       margin-top: 0.8rem;
     }
     @include respond-to('l'){
-      margin-left: -0.6rem;
-      letter-spacing: 0.36rem;
+      margin-left: 0rem;
+      letter-spacing: 0.3rem;
     }
     @include respond-to('xl'){
       font-size: 1.4rem;
-      margin-left: -1.2rem;
-      letter-spacing: 0.38rem;
+      margin-left: -0.7rem;
+      letter-spacing: 0.4rem;
+    }
+    @include respond-to('xxl'){
+      font-size: 1.4rem;
+      margin-left: -1rem;
+      letter-spacing: 0.43rem;
     }
   }
 
@@ -257,14 +273,17 @@ h5 {
     }
 
     @include respond-to('l'){
-      letter-spacing: 0.36rem;
-      left: 8.4rem;
+      letter-spacing: 0.3rem;
+      left: 9.1rem;
     }
 
     @include respond-to('xl'){
-      letter-spacing: 0.38rem;
+      letter-spacing: 0.4rem;
       font-size: 1.4rem;
-      left: 10.4rem;
+      left: 10.8rem;
+    }
+    @include respond-to('xxl'){
+      letter-spacing: 0.43rem;
     }
   }
 
@@ -280,8 +299,11 @@ h5 {
       margin-left: $margin-side-tab;
       zoom: 80%;
     }
+    @include respond-to('l'){
+      margin-left: $margin-side-screen;
+      zoom: 74%;
+    }
     @include respond-to('xl'){
-      margin-left: $margin-side-tab;
       height: 12%;
       zoom: 90%;
     }
@@ -333,9 +355,9 @@ h5 {
   .telephone {
     font-weight: 600;
     font-size: 1.4rem;
-    letter-spacing: 0.51rem;
+    letter-spacing: 0.5rem;
     margin-left: 2rem;
-    margin-top: 0.4rem;
+    margin-top: 0.6rem;
     color: #000000;
 
     @include respond-to('m'){
@@ -347,11 +369,13 @@ h5 {
     @include respond-to('l'){
       letter-spacing: 0.48rem;
       font-size: 1.2rem;
-      margin-top: 0.8rem;
     }
   
     @include respond-to('xl'){
       font-size: 1.4rem;
+      margin-left: 1.8rem;
+    }
+    @include respond-to('xxl'){
       margin-left: 2rem;
     }
   }
@@ -433,9 +457,16 @@ h5 {
   @include respond-to('m'){
     grid-template-columns: 70% 30%;
   }
+  @include respond-to('l'){
+    grid-template-columns: 80% 20%;
+  }
 
   h2 {
     padding-left: $margin-side-mob;
+    @include respond-to('xl'){
+      font-size: 3em;
+      margin-top: 0.4rem;
+    }
   }
 }
 
@@ -520,10 +551,11 @@ h5 {
   width: 3rem;
   display: inline-block;
   margin: 1.5rem 1rem;
+
   @include respond-to('s'){
     height: 2.5rem;
     width: 2.5rem;
-    margin: 0.5rem 0.5rem 0.5rem 1rem;
+    margin: 0.8rem 0.5rem 0.5rem 1rem;
   }
 }
 
@@ -557,7 +589,6 @@ h5 {
 
   @include respond-to('m'){
     grid-template-columns: 10% 50% 20% 12% 10%;
-    grid-template-rows: 3rem;
   }
 
   @include respond-to('l'){
@@ -572,6 +603,10 @@ h5 {
 
     + div {
       grid-area: 1 / 2 / span 2 / span 1;
+      @include respond-to('s'){
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
     }
   }
 
@@ -581,7 +616,7 @@ h5 {
     margin-right: auto;
     @include respond-to('s'){
       grid-column: 3 / 4;
-      grid-row: 1;
+      grid-row: 1 / 2;
     }
   }
 
@@ -602,6 +637,13 @@ h5 {
     h5 {
       margin-bottom: 0;
       margin-top: 0.8rem;
+
+      @include respond-to('m'){
+        margin-top: 0.4rem;
+      }
+      @include respond-to('xl'){
+        margin-top: 0.8rem;
+      }
     }
 
     p {
@@ -659,7 +701,7 @@ h5 {
 .icon-store,
 .icon-truck {
   grid-column: 1 / 2;
-  margin: 0.5rem 0.5rem 0.5rem $margin-side-mob;
+  margin: 0.7rem 0.5rem 0.5rem $margin-side-mob;
 
   @include respond-to('xl'){
     margin-left: $margin-side-screen;
@@ -670,11 +712,15 @@ h5 {
 .radio-store {
   grid-column: 2 / 3;
   display: inline-block;
-  line-height: 3rem;
+  line-height: 3.5rem;
   margin-left: 1rem;
 
   @include respond-to('s'){
     margin-left: 0rem;
+  }
+
+  @include respond-to('l'){
+    line-height: 3rem;
   }
 
   input[type=radio] {
@@ -712,7 +758,7 @@ h5 {
 
   label::before {
     left: -1.7rem;
-    top: 1.4rem;
+    top: 1.5rem;
     transition: opacity 0.2s linear;
     opacity: 0;
     width: 9px;
