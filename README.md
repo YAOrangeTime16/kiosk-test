@@ -16,7 +16,3 @@ Kiosken-quiz: https://yaorangetime16.github.io/kiosk-test/
 |Package Manager|npm|
 |Icons| [Icon Finder](https://www.iconfinder.com)|
 |Color|[Color-picker](https://imagecolorpicker.com/)|
-
-**NOTE**     
-* The website is not completely responsive (it works only for desktop (also iPad), but not for mobile phones)     
-* The layout has been tested both on Windows OS and Mac OS, but it is more optimized for Mac
